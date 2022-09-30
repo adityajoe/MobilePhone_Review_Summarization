@@ -4,6 +4,6 @@ sklearn
 joblib
 matplotlib
 seaborn
-PIL
+Pillow
 plotly.express
 spacy
