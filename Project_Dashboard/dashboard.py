@@ -8,11 +8,12 @@ from spacy.lang.en.stop_words import STOP_WORDS
 stopwords = list(STOP_WORDS)
 from sklearn.feature_extraction.text import CountVectorizer
 model_name = ["poco", "x3", "pro"]
-raw_path = "https://github.com/adityajoe/MobilePhone_Review_Summarization/edit/main/Project_Dashboard"
+raw_path = "https://raw.githubusercontent.com/adityajoe/MobilePhone_Review_Summarization/main/Project_Dashboard"
 stopwords.extend(model_name)
 import numpy as np
 import seaborn as sns
 import plotly.express as px
+import urllib.request
 import matplotlib.pyplot as plt
 import time
 import os
@@ -101,10 +102,10 @@ if mobile == "Poco X3 Pro":
     path = os.path.join(raw_path,"poco")
     header = "POCO X3 PRO!"
 elif mobile == "Iphone SE":
-    path = path = os.path.join(raw_path,"apple")
+    path = os.path.join(raw_path,"apple")
     header = "Iphone SE"
-
-image = Image.open(os.path.join(path, "image.jpg"))
+urllib.request.urlretrieve(os.path.join(path,"image.jpg"))
+image = Image.open("image.jpg")
 data, df_reviews = get_data(path)
 reviews = data["Review Text"]
 titles = data["Review Title"]
