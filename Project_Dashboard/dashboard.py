@@ -86,14 +86,14 @@ def aspects():
             ax1.pie(arr, explode=explode, labels=labels, autopct='%1.1f%%',
                     shadow=True, startangle=90)
             ax1.axis('equal')
-            st.pyplot(fig1, use_container_width=True)
+            st.pyplot(fig1)# use_container_width=True)
             st.write()
             st.write()
     st.header("Main features and their Likeabailtiy Factors")
     main_topics = pd.DataFrame(list(zip(key_topics, likes, dislikes)),
                                columns=['Key Features', 'Likeability', 'Percentage_dislike'])
     fig = px.bar(main_topics, x='Key Features', y='Likeability', color="Key Features")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig) #, use_container_width=True)
 
 st.title("Mobile Phone Review Summarization")
 mobile = st.selectbox("Select the Phone Type",
