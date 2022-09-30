@@ -104,8 +104,8 @@ if mobile == "Poco X3 Pro":
 elif mobile == "Iphone SE":
     path = os.path.join(raw_path,"apple")
     header = "Iphone SE"
-urllib.request.urlretrieve(os.path.join(path,"image.jpg"))
-image = Image.open("image.jpg")
+a = urllib.request.urlretrieve(os.path.join(path,"image.jpg"))
+image = Image.open(a)
 data, df_reviews = get_data(path)
 reviews = data["Review Text"]
 titles = data["Review Title"]
