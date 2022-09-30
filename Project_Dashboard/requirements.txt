@@ -1,0 +1,10 @@
+pandas
+numpy
+sklearn
+joblib
+matplotlib
+seaborn
+re
+PIL
+plotly.express
+spacy
