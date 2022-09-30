@@ -4,7 +4,7 @@ sklearn
 joblib
 matplotlib
 seaborn
-re
+regex
 PIL
 plotly.express
 spacy
