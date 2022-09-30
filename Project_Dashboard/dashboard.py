@@ -8,6 +8,7 @@ from spacy.lang.en.stop_words import STOP_WORDS
 stopwords = list(STOP_WORDS)
 from sklearn.feature_extraction.text import CountVectorizer
 model_name = ["poco", "x3", "pro"]
+raw_path = "https://github.com/adityajoe/MobilePhone_Review_Summarization/edit/main/Project_Dashboard"
 stopwords.extend(model_name)
 import numpy as np
 import seaborn as sns
@@ -97,10 +98,10 @@ st.title("Mobile Phone Review Summarization")
 mobile = st.selectbox("Select the Phone Type",
                       ("Poco X3 Pro", "Iphone SE"))
 if mobile == "Poco X3 Pro":
-    path = "poco"
+    path = os.path.join(raw_path,"poco")
     header = "POCO X3 PRO!"
 elif mobile == "Iphone SE":
-    path = "apple"
+    path = path = os.path.join(raw_path,"apple")
     header = "Iphone SE"
 
 image = Image.open(os.path.join(path, "image.jpg"))
