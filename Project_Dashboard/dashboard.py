@@ -13,7 +13,7 @@ stopwords.extend(model_name)
 import numpy as np
 import seaborn as sns
 import plotly.express as px
-import urllib.request
+import urllib3.request
 import matplotlib.pyplot as plt
 import time
 import os
