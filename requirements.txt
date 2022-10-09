@@ -4,7 +4,7 @@ sklearn
 joblib
 matplotlib
 seaborn
-urllib.request
+urllib3
 Pillow
 plotly.express
 spacy
