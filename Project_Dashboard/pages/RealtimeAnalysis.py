@@ -27,7 +27,7 @@ info_dict = {"Camera": ['photos', 'pictures', 'camera'],
              "Performance": ["fast", "processor", "processing", "speed", "performance"],
              "Software": ["bugs", "ui", "software"], "Battery": ["battery", "charge", "charging", "long use"],
              "Display": ["Display", "Screen", "hz"]}
-raw_path = "https://raw.githubusercontent.com/adityajoe/MobilePhone_Review_Summarization/main/Project_Dashboard/pages"
+path = "https://raw.githubusercontent.com/adityajoe/MobilePhone_Review_Summarization/main/Project_Dashboard/pages"
 def getPolarity(text):
     return TextBlob(text).sentiment.polarity
 def getAnalysis2(polarity):
