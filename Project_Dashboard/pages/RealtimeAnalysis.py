@@ -100,7 +100,7 @@ def n_grams():
 
 
 def analytics():
-    st.title("Scraped Dataset")
+    st.title("Scraped Dataset: " + name)
     st.caption("PS. Hover over a review to read it completely")
     st.dataframe(st.session_state.data)
     st.write("")
@@ -253,6 +253,12 @@ st.image(image)
 #header = st.text_input("Enter the name of your Phone!")
 link = st.text_input("Enter flipkart link of the product")
 link = link + "&page=1"
+name = ""
+for char in link[25:50]:
+    if char != "/":
+        name += char
+    else:
+        break
 st.caption("""Choose any mobile phone on flipkart, go to reviews section and click on page 2 of reviews.
            Paste that link in the box above""")
 if st.button("Start Scraping"):
