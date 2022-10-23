@@ -8,3 +8,4 @@ Pillow
 plotly.express
 spacy
 textblob
+bs4
