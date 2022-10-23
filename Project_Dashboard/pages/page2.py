@@ -27,8 +27,7 @@ info_dict = {"Camera": ['photos', 'pictures', 'camera'],
              "Performance": ["fast", "processor", "processing", "speed", "performance"],
              "Software": ["bugs", "ui", "software"], "Battery": ["battery", "charge", "charging", "long use"],
              "Display": ["Display", "Screen", "hz"]}
-raw_path = "https://raw.githubusercontent.com/adityajoe/MobilePhone_Review_Summarization/main/Project_Dashboard"
-
+raw_path = "https://raw.githubusercontent.com/adityajoe/MobilePhone_Review_Summarization/main/Project_Dashboard/pages"
 def getPolarity(text):
     return TextBlob(text).sentiment.polarity
 def getAnalysis2(polarity):
@@ -248,7 +247,8 @@ def aspects():
 
 #main
 st.title("Analyse Your Phone in Realtime!")
-image = Image.open('image.jpg')
+a = urllib.request.urlretrieve(os.path.join(path,"image.jpg"))
+image = Image.open(a[0])
 st.image(image)
 #header = st.text_input("Enter the name of your Phone!")
 link = st.text_input("Enter flipkart link of the product")
