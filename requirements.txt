@@ -7,3 +7,4 @@ seaborn
 Pillow
 plotly.express
 spacy
+TextBlob
