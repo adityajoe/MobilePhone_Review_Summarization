@@ -256,11 +256,12 @@ link = link + "&page=1"
 name = ""
 counter = 0
 for char in link[25:50]:
-    if char != "/" and counter <2:
+    if char != "/":
         name += char
     if char == "-":
         counter +=1
         if counter >2:
+            name{:-1]
             break
     else:
         break
