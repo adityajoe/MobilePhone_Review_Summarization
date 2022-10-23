@@ -101,7 +101,7 @@ def n_grams():
 
 def analytics():
     st.title("Analytics: " + name.capitalize())
-    st.caption("PS. Hover over a review to read it completely")
+    #st.caption("PS. Hover over a review to read it completely")
     st.dataframe(st.session_state.data)
     st.write("")
     st.write("")
@@ -259,8 +259,7 @@ for char in link[25:50]:
         name += char
     else:
         break
-st.caption("""Choose any mobile phone on flipkart, go to reviews section and click on page 2 of reviews.
-           Paste that link in the box above""")
+st.caption("""Choose any mobile phone on flipkart, go to reviews section and paste that link in the box above""")
 if st.button("Start Scraping"):
     st.session_state.data = get_data(link)
     st.session_state.flag = 1
