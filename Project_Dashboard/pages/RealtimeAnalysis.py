@@ -100,7 +100,7 @@ def n_grams():
 
 
 def analytics():
-    st.title("Scraped Dataset: " + name.capitalize())
+    st.title("Analytics: " name.capitalize())
     st.caption("PS. Hover over a review to read it completely")
     st.dataframe(st.session_state.data)
     st.write("")
@@ -254,15 +254,9 @@ st.image(image)
 link = st.text_input("Enter flipkart link of the product")
 link = link + "&page=1"
 name = ""
-counter = 0
 for char in link[25:50]:
     if char != "/":
         name += char
-    if char == "-":
-        counter +=1
-        if counter >2:
-            name[:-1]
-            break
     else:
         break
 st.caption("""Choose any mobile phone on flipkart, go to reviews section and click on page 2 of reviews.
