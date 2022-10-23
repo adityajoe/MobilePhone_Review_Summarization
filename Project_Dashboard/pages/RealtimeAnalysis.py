@@ -100,7 +100,7 @@ def n_grams():
 
 
 def analytics():
-    st.title("Scraped Dataset: " + name)
+    st.title("Scraped Dataset: " + name.capitalize())
     st.caption("PS. Hover over a review to read it completely")
     st.dataframe(st.session_state.data)
     st.write("")
