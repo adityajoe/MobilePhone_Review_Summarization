@@ -1,6 +1,6 @@
 pandas
 numpy
-sklearn
+scikit-learn
 joblib
 matplotlib
 seaborn
@@ -9,4 +9,3 @@ plotly.express
 spacy
 textblob
 bs4
-sklearn.feature_extraction.text
